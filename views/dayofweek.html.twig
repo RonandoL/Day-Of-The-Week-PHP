@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Things</title>
+    </head>
+    <body>
+        <h1>What day of the week?</h1>
+        <form action="/results">
+            <label for="month">Month</label>
+            <input type="number" name="month" id='month'>
+            <label for="day">Day</label>
+            <input type="number" name="day" id='day'>
+            <label for="year">Year</label>
+            <input type="number" name="year" id='year'>
+            <button type="submit">Go</button>
+        </form>
+        {% if results is not empty %}
+            <h2>Results</h2>
+            <p>{{ results }}</p>
+        {% endif %}
+    </body>
+</html>
